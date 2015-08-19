@@ -1,4 +1,4 @@
-package edu.cmu.ml.rtw.util;
+package edu.cmu.ml.rtw.nominals.util;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

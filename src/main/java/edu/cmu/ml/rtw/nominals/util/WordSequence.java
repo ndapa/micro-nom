@@ -1,4 +1,4 @@
-package edu.cmu.ml.rtw.util;
+package edu.cmu.ml.rtw.nominals.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
