@@ -1,0 +1,514 @@
+[CitizenOfCountry]	298
+WKP_country	NELL_Z	NELL_person	3	1	5065.0
+WKP_country	WDN_person	NELL_person	3	1	5065.0
+NWKP_country	NELL_profession	NELL_person	3	1	2944.0
+WKP_country	NELL_jobposition	NELL_person	3	1	2856.0
+WKP_country	NELL_person	NELL_person	3	1	580.0
+WKP_country	NELL_sportsteamposition	NELL_person	3	1	457.0
+WKP_country	counterpart	NELL_person	3	1	355.0
+WKP_country	director	NELL_person	3	1	251.0
+WKP_country	star	NELL_person	3	1	234.0
+WKP_country	midfielder	NELL_person	3	1	206.0
+WKP_country	NELL_politicaloffice	NELL_person	3	1	200.0
+WKP_country	striker	NELL_person	3	1	195.0
+WKP_country	coach	NELL_person	3	1	177.0
+WKP_country	writer	NELL_person	3	1	161.0
+WKP_country	actor	NELL_person	3	1	152.0
+WKP_country	defender	NELL_person	3	1	148.0
+WKP_country	leader	NELL_person	3	1	142.0
+WKP_country	president	NELL_person	3	1	139.0
+WKP_country	author	NELL_person	3	1	138.0
+WKP_country	actress	NELL_person	3	1	138.0
+WKP_country	WDN_group	NELL_person	3	1	137.0
+WKP_country	artist	NELL_person	3	1	125.0
+WKP_country	veteran	NELL_person	3	1	115.0
+WKP_country	singer	NELL_person	3	1	107.0
+WKP_country	captain	NELL_person	3	1	101.0
+WKP_country	journalist	NELL_person	3	1	100.0
+WKP_country	rider	NELL_person	3	1	96.0
+WKP_country	filmmaker	NELL_person	3	1	94.0
+WKP_country	compatriot	NELL_person	3	1	94.0
+WKP_country	composer	NELL_person	3	1	88.0
+WKP_country	pair	NELL_person	3	1	84.0
+WKP_country	duo	NELL_person	3	1	84.0
+WKP_country	player	NELL_person	3	1	74.0
+WKP_country	qualifier	NELL_person	3	1	73.0
+WKP_country	teammate	NELL_person	3	1	70.0
+WKP_country	poet	NELL_person	3	1	69.0
+WKP_country	winger	NELL_person	3	1	69.0
+WKP_country	legend	NELL_person	3	1	62.0
+WKP_country	driver	NELL_person	3	1	62.0
+WKP_country	billionaire	NELL_person	3	1	61.0
+WKP_country	philosopher	NELL_person	3	1	61.0
+WKP_country	cyclist	NELL_person	3	1	61.0
+WKP_country	designer	NELL_person	3	1	61.0
+WKP_country	NELL_city	NELL_person	3	1	60.0
+WKP_country	novelist	NELL_person	3	1	60.0
+WKP_country	businessman	NELL_person	3	1	55.0
+WKP_country	scientist	NELL_person	3	1	54.0
+WKP_country	goalkeeper	NELL_person	3	1	51.0
+WKP_country	historian	NELL_person	3	1	48.0
+WKP_country	premier	NELL_person	3	1	48.0
+WKP_country	painter	NELL_person	3	1	43.0
+WKP_country	ace	NELL_person	3	1	41.0
+WKP_country	superstar	NELL_person	3	1	40.0
+WKP_country	playmaker	NELL_person	3	1	38.0
+WKP_country	architect	NELL_person	3	1	38.0
+WKP_country	tycoon	NELL_person	3	1	37.0
+WKP_country	ambassador	NELL_person	3	1	37.0
+WKP_country	dictator	NELL_person	3	1	37.0
+WKP_country	playwright	NELL_person	3	1	37.0
+WKP_country	economist	NELL_person	3	1	37.0
+WKP_country	center	NELL_person	3	1	36.0
+WKP_country	referee	NELL_person	3	1	35.0
+WKP_country	NELL_musicartist	NELL_person	3	1	35.0
+WKP_country	golfer	NELL_person	3	1	34.0
+WKP_country	explorer	NELL_person	3	1	33.0
+WKP_country	politician	NELL_person	3	1	32.0
+WKP_country	champion	NELL_person	3	1	32.0
+WKP_country	diplomat	NELL_person	3	1	31.0
+WKP_country	teenager	NELL_person	3	1	30.0
+WKP_country	skipper	NELL_person	3	1	28.0
+WKP_country	comedian	NELL_person	3	1	28.0
+WKP_country	musician	NELL_person	3	1	27.0
+WKP_country	model	NELL_person	3	1	26.0
+WKP_country	conductor	NELL_person	3	1	26.0
+WKP_country	NELL_company	NELL_location	3	1	24.0
+WKP_country	swimmer	NELL_person	3	1	24.0
+WKP_country	goaltender	NELL_person	3	1	24.0
+WKP_country	footballer	NELL_person	3	1	24.0
+WKP_country	team-mate	NELL_person	3	1	24.0
+WKP_country	rookie	NELL_person	3	1	23.0
+WKP_country	club	NELL_person	3	1	23.0
+WKP_country	lawyer	NELL_person	3	1	23.0
+WKP_country	sculptor	NELL_person	3	1	22.0
+WKP_country	opponent	NELL_person	3	1	22.0
+WKP_country	soprano	NELL_person	3	1	22.0
+WKP_country	scholar	NELL_person	3	1	22.0
+WKP_country	minister	NELL_person	3	1	22.0
+WKP_country	keeper	NELL_person	3	1	21.0
+WKP_country	batsman	NELL_person	3	1	21.0
+WKP_country	countryman	NELL_person	3	1	21.0
+WKP_country	manager	NELL_person	3	1	21.0
+WKP_country	goalie	NELL_person	3	1	21.0
+WKP_country	chef	NELL_person	3	1	21.0
+WKP_country	pianist	NELL_person	3	1	20.0
+WKP_country	strongman	NELL_person	3	1	20.0
+WKP_country	hope	NELL_person	3	1	20.0
+WKP_country	king	NELL_person	3	1	20.0
+WKP_country	master	NELL_person	3	1	20.0
+WKP_country	colleague	NELL_person	3	1	20.0
+WKP_country	lawmaker	NELL_person	3	1	20.0
+WKP_country	sprinter	NELL_person	3	1	20.0
+WKP_country	mathematician	NELL_person	3	1	19.0
+WKP_country	boxer	NELL_person	3	1	19.0
+WKP_country	pilot	NELL_person	3	1	19.0
+WKP_country	physicist	NELL_person	3	1	18.0
+WKP_country	activist	NELL_person	3	1	18.0
+WKP_country	tenor	NELL_person	3	1	18.0
+WKP_country	ex-president	NELL_person	3	1	17.0
+WKP_country	skater	NELL_person	3	1	17.0
+WKP_country	substitute	NELL_person	3	1	17.0
+WKP_country	astronomer	NELL_person	3	1	17.0
+WKP_country	spy	NELL_person	3	1	16.0
+WKP_country	defenseman	NELL_person	3	1	16.0
+WKP_country	partner	NELL_person	3	1	15.0
+WKP_country	guard	NELL_person	3	1	15.0
+WKP_country	producer	NELL_person	3	1	15.0
+WKP_country	pitcher	NELL_person	3	1	15.0
+WKP_country	writer-director	NELL_person	3	1	15.0
+WKP_country	standout	NELL_person	3	1	15.0
+WKP_country	choreographer	NELL_person	3	1	14.0
+WKP_country	wing	NELL_person	3	1	14.0
+WKP_country	full-back	NELL_person	3	1	14.0
+WKP_country	supermodel	NELL_person	3	1	14.0
+WKP_country	citizen	NELL_person	3	1	14.0
+WKP_country	sensation	NELL_person	3	1	14.0
+WKP_country	singer-songwriter	NELL_person	3	1	14.0
+WKP_country	firm	NELL_person	3	1	14.0
+WKP_country	centre-back	NELL_person	3	1	14.0
+WKP_country	biologist	NELL_person	3	1	14.0
+WKP_country	NELL_location	NELL_city	3	1	14.0
+WKP_country	fly-half	NELL_person	3	1	14.0
+WKP_country	wildcard	NELL_person	3	1	13.0
+WKP_country	rocker	NELL_person	3	1	13.0
+WKP_country	envoy	NELL_person	3	1	13.0
+WKP_country	doctor	NELL_person	3	1	13.0
+WKP_country	reporter	NELL_person	3	1	13.0
+WKP_country	astronaut	NELL_person	3	1	13.0
+WKP_country	professor	NELL_person	3	1	13.0
+WKP_country	skier	NELL_person	3	1	13.0
+WKP_country	athlete	NELL_person	3	1	12.0
+WKP_country	trio	NELL_person	3	1	12.0
+WKP_country	defenceman	NELL_person	3	1	12.0
+WKP_country	paceman	NELL_person	3	1	12.0
+WKP_country	left-hander	NELL_person	3	1	12.0
+WKP_country	film-maker	NELL_person	3	1	12.0
+WKP_country	industrialist	NELL_person	3	1	12.0
+WKP_country	NELL_conference	NELL_person	3	1	12.0
+WKP_country	challenger	NELL_person	3	1	11.0
+WKP_country	cricketer	NELL_person	3	1	11.0
+WKP_country	youngster	NELL_person	3	1	11.0
+WKP_country	critic	NELL_person	3	1	11.0
+WKP_country	analyst	NELL_person	3	1	11.0
+WKP_country	journeyman	NELL_person	3	1	11.0
+WKP_country	chemist	NELL_person	3	1	11.0
+WKP_country	wife	NELL_person	3	1	11.0
+WKP_country	statesman	NELL_person	3	1	11.0
+WKP_country	WDN_person	NELL_musicartist	3	1	11.0
+WKP_country	theologian	NELL_person	3	1	10.0
+WKP_country	lock	NELL_person	3	1	10.0
+WKP_country	icon	NELL_person	3	1	10.0
+WKP_country	newcomer	NELL_person	3	1	10.0
+WKP_country	fighter	NELL_person	3	1	10.0
+WKP_country	naturalist	NELL_person	3	1	10.0
+NELL_person	singer	NELL_person	3	1	10.0
+WKP_country	outsider	NELL_person	3	1	10.0
+WKP_country	teen	NELL_person	3	1	10.0
+
+[companyInCountry]	329
+WKP_country	NELL_organization	NELL_organization	3	1	433.0
+WKP_country	NELL_organization	NELL_company	3	1	433.0
+WKP_country	NELL_company	NELL_company	3	1	384.0
+WKP_country	NELL_company	NELL_organization	3	1	384.0
+WKP_country	WDN_group	NELL_organization	3	1	307.0
+WKP_country	WDN_group	NELL_company	3	1	307.0
+WKP_country	NELL_organization	NELL_publication	3	1	153.0
+WKP_country	NELL_company	NELL_publication	3	1	148.0
+WKP_country	newspaper	NELL_organization	3	1	146.0
+WKP_country	newspaper	NELL_company	3	1	146.0
+WKP_country	NELL_organization	NELL_location	3	1	135.0
+WKP_country	WDN_group	NELL_publication	3	1	135.0
+WKP_country	newspaper	NELL_publication	3	1	128.0
+WKP_country	NELL_company	NELL_location	3	1	111.0
+WKP_country	NELL_location	NELL_company	3	1	110.0
+WKP_country	NELL_location	NELL_organization	3	1	110.0
+WKP_country	WDN_group	NELL_location	3	1	105.0
+WKP_country	NELL_organization	NELL_newspaper	3	1	90.0
+WKP_country	NELL_company	NELL_newspaper	3	1	88.0
+WKP_country	WDN_group	NELL_newspaper	3	1	87.0
+WKP_country	newspaper	NELL_location	3	1	85.0
+WKP_country	newspaper	NELL_newspaper	3	1	83.0
+WKP_country	NELL_bank	NELL_company	3	1	68.0
+WKP_country	NELL_bank	NELL_organization	3	1	68.0
+WKP_country	NELL_organization	NELL_bank	3	1	66.0
+WKP_country	bank	NELL_company	3	1	64.0
+WKP_country	NELL_company	NELL_bank	3	1	64.0
+WKP_country	NELL_person	NELL_company	3	1	64.0
+WKP_country	bank	NELL_organization	3	1	64.0
+WKP_country	NELL_person	NELL_organization	3	1	64.0
+WKP_country	company	NELL_organization	3	1	60.0
+WKP_country	NELL_bank	NELL_bank	3	1	60.0
+WKP_country	company	NELL_company	3	1	60.0
+WKP_country	bank	NELL_bank	3	1	57.0
+WKP_country	NELL_profession	NELL_organization	3	1	46.0
+WKP_country	NELL_profession	NELL_company	3	1	46.0
+WKP_country	NELL_location	NELL_location	3	1	44.0
+WKP_country	carmaker	NELL_company	3	1	44.0
+WKP_country	carmaker	NELL_organization	3	1	44.0
+WKP_country	group	NELL_organization	3	1	43.0
+WKP_country	group	NELL_company	3	1	43.0
+WKP_country	automaker	NELL_company	3	1	42.0
+WKP_country	automaker	NELL_organization	3	1	42.0
+WKP_country	NELL_geopoliticalentity	NELL_company	3	1	42.0
+WKP_country	NELL_organization	NELL_blog	3	1	40.0
+WKP_country	WDN_person	NELL_bank	3	1	39.0
+WKP_country	WDN_group	NELL_blog	3	1	37.0
+WKP_country	NELL_company	NELL_blog	3	1	36.0
+WKP_country	NELL_jobposition	NELL_organization	3	1	34.0
+WKP_country	NELL_jobposition	NELL_company	3	1	34.0
+WKP_country	newspaper	NELL_blog	3	1	32.0
+WKP_country	lender	NELL_company	3	1	29.0
+WKP_country	lender	NELL_organization	3	1	29.0
+WKP_country	NELL_geopoliticallocation	NELL_organization	3	1	29.0
+WKP_country	NELL_geopoliticallocation	NELL_company	3	1	29.0
+WKP_country	lender	NELL_bank	3	1	28.0
+WKP_country	NELL_geopoliticalorganization	NELL_company	3	1	28.0
+WKP_country	NELL_geopoliticalorganization	NELL_organization	3	1	28.0
+WKP_country	firm	NELL_company	3	1	27.0
+WKP_country	NELL_organization	NELL_geopoliticalorganization	3	1	26.0
+WKP_country	NELL_academicfield	NELL_organization	3	1	24.0
+WKP_country	NELL_publication	NELL_company	3	1	22.0
+WKP_country	airline	NELL_organization	3	1	19.0
+WKP_country	airline	NELL_company	3	1	19.0
+WKP_country	manufacturer	NELL_company	3	1	18.0
+WKP_country	manufacturer	NELL_organization	3	1	18.0
+WKP_country	capital	NELL_company	3	1	17.0
+WKP_country	carrier	NELL_company	3	1	16.0
+WKP_country	carrier	NELL_organization	3	1	16.0
+WKP_country	NELL_publication	NELL_publication	3	1	15.0
+WKP_country	conglomerate	NELL_company	3	1	12.0
+WKP_country	conglomerate	NELL_organization	3	1	12.0
+WKP_country	paper	NELL_organization	3	1	12.0
+WKP_country	automaker	NELL_vehicle	3	1	11.0
+WKP_country	unit	NELL_company	3	1	11.0
+WKP_country	magazine	NELL_company	3	1	11.0
+WKP_country	broadcaster	NELL_company	3	1	11.0
+WKP_country	unit	NELL_organization	3	1	11.0
+WKP_country	NELL_academicfield	NELL_publication	3	1	11.0
+WKP_country	WDN_group	NELL_geopoliticalorganization	3	1	11.0
+WKP_country	brand	NELL_company	3	1	11.0
+WKP_country	brand	NELL_organization	3	1	11.0
+WKP_country	magazine	NELL_organization	3	1	11.0
+WKP_country	broadcaster	NELL_organization	3	1	11.0
+WKP_country	paper	NELL_location	3	1	10.0
+WKP_country	subsidiary	NELL_organization	3	1	10.0
+WKP_country	carmaker	NELL_vehicle	3	1	10.0
+WKP_country	paper	NELL_publication	3	1	10.0
+WKP_country	subsidiary	NELL_company	3	1	10.0
+
+concept:worksfor	86
+NELL_organization	NELL_profession	NELL_person	3	1	118.0
+NELL_organization	NELL_jobposition	NELL_person	3	1	117.0
+NELL_company	NELL_profession	NELL_person	3	1	105.0
+NELL_company	NELL_jobposition	NELL_person	3	1	104.0
+NELL_location	NELL_profession	NELL_person	3	1	84.0
+NELL_location	NELL_jobposition	NELL_person	3	1	82.0
+NELL_organization	coach	NELL_person	3	1	68.0
+NELL_publication	NELL_profession	NELL_person	3	1	64.0
+NELL_publication	NELL_jobposition	NELL_person	3	1	63.0
+NELL_blog	NELL_profession	NELL_person	3	1	58.0
+NELL_blog	NELL_jobposition	NELL_person	3	1	57.0
+NELL_geopoliticalentity	coach	NELL_person	3	1	54.0
+NELL_location	coach	NELL_person	3	1	54.0
+NELL_geopoliticallocation	coach	NELL_person	3	1	54.0
+NELL_geopoliticalorganization	coach	NELL_person	3	1	48.0
+NELL_organization	reporter	NELL_person	3	1	35.0
+NELL_company	reporter	NELL_person	3	1	34.0
+NELL_organization	columnist	NELL_person	3	1	32.0
+NELL_company	columnist	NELL_person	3	1	32.0
+NELL_publication	columnist	NELL_person	3	1	31.0
+NELL_publication	NELL_location	NELL_person	3	1	30.0
+NELL_stateorprovince	coach	NELL_person	3	1	29.0
+NELL_publication	reporter	NELL_person	3	1	28.0
+NELL_blog	columnist	NELL_person	3	1	27.0
+NELL_blog	reporter	NELL_person	3	1	26.0
+NELL_newspaper	NELL_profession	NELL_person	3	1	24.0
+NELL_newspaper	NELL_jobposition	NELL_person	3	1	24.0
+NELL_company	coach	NELL_person	3	1	22.0
+NELL_newspaper	columnist	NELL_person	3	1	21.0
+NELL_organization	anchor	NELL_person	3	1	19.0
+NELL_city	coach	NELL_person	3	1	19.0
+NELL_company	host	NELL_person	3	1	19.0
+NELL_company	anchor	NELL_person	3	1	19.0
+NELL_organization	host	NELL_person	3	1	19.0
+NELL_sportsteam	coach	NELL_person	3	1	16.0
+NELL_newspaper	reporter	NELL_person	3	1	15.0
+NELL_organization	correspondent	NELL_person	3	1	14.0
+NELL_company	colleague	NELL_person	3	1	14.0
+NELL_blog	colleague	NELL_person	3	1	14.0
+NELL_organization	colleague	NELL_person	3	1	14.0
+NELL_publication	colleague	NELL_person	3	1	14.0
+NELL_company	correspondent	NELL_person	3	1	13.0
+NELL_organization	boss	NELL_person	3	1	13.0
+NELL_organization	chief	NELL_person	3	1	12.0
+NELL_organization	NELL_politicaloffice	NELL_person	3	1	12.0
+NELL_newspaper	coach	NELL_person	3	1	11.0
+NELL_geopoliticalentity	NELL_profession	NELL_person	3	1	11.0
+NELL_geopoliticalentity	NELL_jobposition	NELL_person	3	1	11.0
+NELL_publication	coach	NELL_person	3	1	11.0
+NELL_blog	anchor	NELL_person	3	1	11.0
+NELL_publication	anchor	NELL_person	3	1	11.0
+NELL_company	chief	NELL_person	3	1	10.0
+NELL_company	boss	NELL_person	3	1	10.0
+
+concept:musicianinmusicartist	15
+NELL_musicartist	guitarist	NELL_person	3	1	18.0
+NELL_musicartist	frontman	NELL_person	3	1	14.0
+NELL_musicartist	singer	NELL_person	3	1	11.0
+NELL_organization	singer	NELL_person	3	1	11.0
+
+concept:personhasjobposition	65
+NELL_X	NELL_jobposition	NELL_person	3	2	322.0
+NELL_X	NELL_profession	NELL_person	3	2	322.0
+NELL_X	WDN_person	NELL_person	3	2	159.0
+NELL_X	king	NELL_person	3	2	76.0
+NELL_X	NELL_politicaloffice	NELL_person	3	2	74.0
+NELL_X	president	NELL_person	3	2	71.0
+NELL_organization	NELL_jobposition	NELL_person	3	2	53.0
+NELL_organization	NELL_profession	NELL_person	3	2	53.0
+NELL_X	leader	NELL_person	3	2	45.0
+NELL_location	NELL_jobposition	NELL_person	3	2	34.0
+NELL_location	NELL_profession	NELL_person	3	2	34.0
+NELL_geopoliticalentity	NELL_jobposition	NELL_person	3	2	33.0
+NELL_geopoliticalentity	NELL_profession	NELL_person	3	2	33.0
+NELL_organization	WDN_person	NELL_person	3	2	32.0
+NELL_geopoliticallocation	NELL_profession	NELL_person	3	2	28.0
+NELL_geopoliticallocation	NELL_jobposition	NELL_person	3	2	28.0
+NELL_X	economist	NELL_person	3	2	27.0
+NELL_geopoliticalorganization	NELL_profession	NELL_person	3	2	26.0
+NELL_geopoliticalorganization	NELL_jobposition	NELL_person	3	2	26.0
+WKP_country	NELL_profession	NELL_person	3	2	25.0
+WKP_country	NELL_jobposition	NELL_person	3	2	25.0
+NELL_geopoliticalentity	WDN_person	NELL_person	3	2	19.0
+NELL_location	WDN_person	NELL_person	3	2	19.0
+NELL_company	NELL_profession	NELL_person	3	2	17.0
+NELL_company	NELL_jobposition	NELL_person	3	2	17.0
+NELL_X	poet	NELL_person	3	2	16.0
+NELL_geopoliticalorganization	WDN_person	NELL_person	3	2	15.0
+NELL_organization	NELL_politicaloffice	NELL_person	3	2	15.0
+NELL_organization	leader	NELL_person	3	2	14.0
+NELL_organization	NELL_person	NELL_person	3	2	14.0
+NELL_geopoliticallocation	WDN_person	NELL_person	3	2	14.0
+NELL_organization	president	NELL_person	3	2	14.0
+NELL_location	NELL_politicaloffice	NELL_person	3	2	13.0
+NELL_country	NELL_jobposition	NELL_person	3	2	13.0
+NELL_country	NELL_profession	NELL_person	3	2	13.0
+NELL_X	NELL_sportsteamposition	NELL_person	3	2	13.0
+WKP_country	WDN_person	NELL_person	3	2	13.0
+NELL_X	lobbyist	NELL_person	3	2	12.0
+NELL_geopoliticalentity	NELL_politicaloffice	NELL_person	3	2	12.0
+NELL_location	NELL_person	NELL_person	3	2	12.0
+NELL_location	president	NELL_person	3	2	12.0
+WKP_country	NELL_person	NELL_person	3	2	12.0
+NELL_geopoliticallocation	NELL_politicaloffice	NELL_person	3	2	12.0
+NELL_person	NELL_jobposition	NELL_person	3	2	11.0
+NELL_geopoliticallocation	NELL_person	NELL_person	3	2	11.0
+NELL_geopoliticalentity	president	NELL_person	3	2	11.0
+NELL_geopoliticallocation	president	NELL_person	3	2	11.0
+NELL_geopoliticalentity	NELL_person	NELL_person	3	2	11.0
+NELL_company	WDN_person	NELL_person	3	2	11.0
+NELL_person	NELL_profession	NELL_person	3	2	11.0
+
+concept:locationlocatedwithinlocation	92
+WKP_country	NELL_location	NELL_city	3	1	33.0
+WKP_country	NELL_location	NELL_geopoliticallocation	3	1	33.0
+WKP_country	NELL_location	NELL_location	3	1	33.0
+WKP_country	capital	NELL_geopoliticalorganization	3	1	29.0
+WKP_country	capital	NELL_geopoliticalentity	3	1	29.0
+WKP_country	capital	NELL_organization	3	1	29.0
+WKP_country	capital	NELL_city	3	1	28.0
+WKP_country	capital	NELL_geopoliticallocation	3	1	28.0
+WKP_country	capital	NELL_location	3	1	28.0
+NELL_location	NELL_location	NELL_city	3	1	24.0
+NELL_location	capital	NELL_organization	3	1	19.0
+NELL_location	capital	NELL_geopoliticalorganization	3	1	19.0
+NELL_location	capital	NELL_geopoliticalentity	3	1	19.0
+NELL_geopoliticallocation	NELL_location	NELL_city	3	1	19.0
+NELL_organization	capital	NELL_organization	3	1	18.0
+NELL_organization	capital	NELL_geopoliticalorganization	3	1	18.0
+NELL_location	capital	NELL_geopoliticallocation	3	1	18.0
+NELL_location	capital	NELL_city	3	1	18.0
+NELL_organization	capital	NELL_geopoliticalentity	3	1	18.0
+NELL_location	capital	NELL_location	3	1	18.0
+NELL_geopoliticalorganization	capital	NELL_geopoliticalorganization	3	1	17.0
+NELL_organization	capital	NELL_city	3	1	17.0
+NELL_geopoliticalorganization	capital	NELL_geopoliticalentity	3	1	17.0
+NELL_organization	capital	NELL_geopoliticallocation	3	1	17.0
+NELL_geopoliticalentity	capital	NELL_geopoliticalentity	3	1	17.0
+NELL_geopoliticalorganization	capital	NELL_organization	3	1	17.0
+NELL_organization	capital	NELL_location	3	1	17.0
+NELL_geopoliticalentity	capital	NELL_geopoliticalorganization	3	1	17.0
+NELL_geopoliticalentity	capital	NELL_organization	3	1	17.0
+NELL_geopoliticalorganization	capital	NELL_location	3	1	16.0
+NELL_geopoliticalentity	capital	NELL_location	3	1	16.0
+NELL_geopoliticalentity	capital	NELL_geopoliticallocation	3	1	16.0
+NELL_geopoliticalorganization	capital	NELL_geopoliticallocation	3	1	16.0
+NELL_geopoliticalentity	capital	NELL_city	3	1	16.0
+NELL_geopoliticalorganization	capital	NELL_city	3	1	16.0
+
+concept:journalistwritesforpublication	61
+NELL_publication	columnist	NELL_person	3	1	39.0
+NELL_organization	reporter	NELL_person	3	1	39.0
+NELL_location	columnist	NELL_person	3	1	39.0
+NELL_organization	columnist	NELL_person	3	1	39.0
+NELL_company	reporter	NELL_person	3	1	39.0
+NELL_company	columnist	NELL_person	3	1	39.0
+NELL_location	reporter	NELL_person	3	1	38.0
+NELL_publication	reporter	NELL_person	3	1	36.0
+NELL_blog	reporter	NELL_person	3	1	34.0
+NELL_blog	columnist	NELL_person	3	1	33.0
+NELL_newspaper	reporter	NELL_person	3	1	27.0
+NELL_location	writer	NELL_person	3	1	11.0
+NELL_location	anchor	NELL_person	3	1	11.0
+NELL_publication	anchor	NELL_person	3	1	11.0
+NELL_publication	writer	NELL_person	3	1	11.0
+NELL_company	writer	NELL_person	3	1	11.0
+NELL_organization	anchor	NELL_person	3	1	11.0
+NELL_blog	writer	NELL_person	3	1	10.0
+NELL_organization	critic	NELL_person	3	1	10.0
+
+concept:athleteplaysforteam	8
+NELL_sportsteam	NELL_sportsteamposition	NELL_person	3	1	23.0
+
+concept:citycapitalofcountry	84
+WKP_country	capital	NELL_city	3	1	43.0
+
+concept:bookwriter	1
+NELL_book	author	NELL_person	1	3	12.0
+
+concept:athletewinsawardtrophytournament	3
+NELL_awardtrophytournament	champion	NELL_person	3	1	15.0
+
+concept:citylocatedincountry	102
+WKP_country	NELL_location	NELL_city	3	1	34.0
+WKP_country	capital	NELL_geopoliticallocation	3	1	24.0
+WKP_country	capital	NELL_organization	3	1	24.0
+WKP_country	capital	NELL_geopoliticalentity	3	1	24.0
+WKP_country	capital	NELL_location	3	1	24.0
+WKP_country	capital	NELL_geopoliticalorganization	3	1	24.0
+WKP_country	capital	NELL_city	3	1	23.0
+NELL_country	capital	NELL_location	3	1	12.0
+
+concept:coachesteam	2
+NELL_sportsteam	coach	NELL_person	3	1	17.0
+
+concept:musicianplaysinstrument	4
+NELL_X	NELL_musicinstrument	NELL_person	3	2	24.0
+NELL_X	guitar	NELL_person	3	2	19.0
+NELL_musicinstrument	NELL_musicinstrument	NELL_person	3	2	17.0
+NELL_musicinstrument	guitar	NELL_person	3	2	15.0
+
+author	20
+NELL_book	author	NELL_person	1	3	20
+
+owner	20
+NELL_organization	owner	NELL_person	3	1	400
+NELL_sportsteam	owner	NELL_person	3	1	147.0
+NELL_publication	owner	NELL_person	3	1	20
+
+aide	20
+NELL_person	aide	NELL_person	1	3	126.0
+
+supporter	20
+NELL_organization	supporter	NELL_person	1	3	20
+NELL_person	supporter	NELL_person	1	3	20
+
+star	20
+NELL_location	superstar	NELL_person	1	3	20
+NELL_organization	star	NELL_person	1	3	20
+
+resident	20
+NELL_location	resident	NELL_person	1	3	20
+NELL_city	resident	NELL_person	1	3	20
+
+legend	20
+NELL_geopoliticallocation	legend	NELL_person	1	3	20
+NELL_organization	legend	NELL_person	1	3	20
+NELL_location	legend	NELL_person	1	3	20
+
+agent	20
+NELL_governmentorganization	agent	NELL_person	1	3	20
+
+founder	20
+NELL_organization	founder	NELL_person	1	3	20
+NELL_organization	co-founder	NELL_person	1	3	20
+
+subsidiary	20
+NELL_organization	subsidiary	NELL_organization	1	3	20
+NELL_organization	unit	NELL_organization	1	3	20
+
+biographer	20
+NELL_person	biographer	NELL_person	1	3	20
+
+alumnus	20
+NELL_school	alumnus	NELL_person	1	3	20
+NELL_university	alumnus	NELL_person	1	3	20
+NELL_school	alum	NELL_person	1	3	20
+NELL_university	alum	NELL_person	1	3	20
+NELL_organization	graduate	NELL_person	1	3	20
+
+fan	20
+NELL_organization	fan	NELL_person	1	3	20
+NELL_location	fan	NELL_person	1	3	20
+NELL_person	fan	NELL_person	1	3	20

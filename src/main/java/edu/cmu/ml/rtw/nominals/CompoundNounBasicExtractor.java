@@ -11,7 +11,6 @@ import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
 import edu.cmu.ml.rtw.generic.util.FileUtil;
 import edu.cmu.ml.rtw.nominals.util.NounPhrase;
 import edu.cmu.ml.rtw.nominals.util.RelationSequence;
@@ -61,16 +60,9 @@ public class CompoundNounBasicExtractor {
       for (String name : names) {
         String val = name.trim();
         result.put(val, parts[0].trim());
+        result.put(val.toLowerCase(), parts[0].trim());
       }
 
-      line = line.toLowerCase();
-      parts = line.split(SEP);
-      names = parts[1].split(", ");
-      // String [] names2 = parts[2];
-      for (String name : names) {
-        String val = name.trim();
-        result.put(val, parts[0].trim());
-      }
     }
 
     return result;
@@ -285,7 +277,8 @@ public class CompoundNounBasicExtractor {
         if (nounphrasePattern.equals(nominals3) && !countryMap.containsKey(np1.toString().trim().toLowerCase())) {
           continue;
         }
-        TriNominal found = new TriNominal(np1.toString(), np2.toString(), np3.toString(),nominalNP.startInWordSequence(),nominalNP.endInWordSequence()  );
+        TriNominal found = new TriNominal(np1.toString(), np2.toString(), np3.toString(), nominalNP.startInWordSequence(),
+            nominalNP.endInWordSequence());
         nominalNPList.add(found);
         //        String instanceFound = nominalNP.toString() + SEP + np1.toString() + SEP + np2.toString() + SEP + np3.toString() + SEP
         //            + wordseqNP.WordTagToString() + SEP + nominalNP.startInWordSequence() + SEP + nominalNP.endInWordSequence() + SEP

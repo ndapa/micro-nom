@@ -1,15 +1,38 @@
 package edu.cmu.ml.rtw.nominals;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 
+import edu.cmu.ml.rtw.generic.data.annotation.AnnotationType;
+import edu.cmu.ml.rtw.generic.data.annotation.nlp.AnnotationTypeNLP;
+import edu.cmu.ml.rtw.generic.data.annotation.nlp.DocumentNLP;
+import edu.cmu.ml.rtw.generic.data.annotation.nlp.PoSTag;
+import edu.cmu.ml.rtw.generic.data.annotation.nlp.TokenSpan;
+import edu.cmu.ml.rtw.generic.data.annotation.nlp.AnnotationTypeNLP.Target;
+import edu.cmu.ml.rtw.generic.data.annotation.nlp.micro.Annotation;
+import edu.cmu.ml.rtw.generic.model.annotator.nlp.AnnotatorTokenSpan;
+import edu.cmu.ml.rtw.generic.util.Triple;
+import edu.cmu.ml.rtw.micro.cat.data.annotation.nlp.AnnotationTypeNLPCat;
 import edu.cmu.ml.rtw.nominals.util.RelationSequence;
+import edu.cmu.ml.rtw.nominals.util.WordSequence;
 
-public class NominalsReader {
+public class NominalsReader implements AnnotatorTokenSpan<BinaryRelationInstance> {
+
+  public static final AnnotationTypeNLP<BinaryRelationInstance> NOMINALRELATIONS = new AnnotationTypeNLP<BinaryRelationInstance>("nell-nom",
+      BinaryRelationInstance.class, Target.TOKEN_SPAN);
+
+  static final AnnotationType<?>[] REQUIRED_ANNOTATIONS = new AnnotationType<?>[] {
+      AnnotationTypeNLP.TOKEN,
+      AnnotationTypeNLP.SENTENCE,
+      AnnotationTypeNLP.POS };
 
   public CompoundNounBasicExtractor basicextractor;
   static HashMap<String, String> countryMap = new HashMap<String, String>();
+  HashMap<String, HashSet<String>> npCategoriesInContext;
   static String SEP = "\t";
   String NELL_typePrefix = "NELL_";
   String WordNet_typePrefix = "WDN_";
@@ -18,19 +41,21 @@ public class NominalsReader {
   String NELLZ = "NELL_Z";
 
   public NominalsReader() {
-    if (basicextractor == null) {
-      basicextractor = new CompoundNounBasicExtractor();
-      countryMap = basicextractor.countryMap;
-    }
+    //    if (basicextractor == null) {
+    //      basicextractor = new CompoundNounBasicExtractor();
+    //      countryMap = basicextractor.countryMap;
+    //    }
   }
 
-  public void process(TriNominal Nom, HashMap<String, HashMap<String, RelationSequence>> sequences, HashMap<String, HashSet<String>> nellTypes)
-      throws NumberFormatException, IOException {
+  public List<BinaryRelationInstance> process(TriNominal Nom, HashMap<String, HashMap<String, RelationSequence>> sequences,
+      HashMap<String, HashSet<String>> nellTypes, HashMap<String, HashSet<String>> npCategoriesInContext) throws NumberFormatException, IOException {
 
     HashMap<String, HashSet<String>> relationstoInstances = new HashMap<String, HashSet<String>>();
     for (String relation : sequences.keySet()) {
       relationstoInstances.put(relation, new HashSet<String>());
     }
+
+    List<BinaryRelationInstance> result = new ArrayList<BinaryRelationInstance>();
 
     HashSet<String> uniqueTriplesSet = new HashSet<String>();
 
@@ -43,32 +68,13 @@ public class NominalsReader {
     // if (arg2.length() <= 1) continue;
     String arg3 = Nom.arg3.toLowerCase().trim();
 
-    // 4 is POS tagged
-    //        String phraseBegin = parts[5].trim();
-    //        String phraseEnd = parts[6].trim();
-    //        
-
-    // NY and WKP nouns mixed up
-    //    String[] arg1P = arg1.split(" ");
-    //    String[] arg1PO = arg1Orginal.split(" ");
-    //
-    //    String arg1R = "";
-    //    String arg1RO = "";
-    //    for (int k = 0; k < arg1P.length; k++) {
-    //      String word = arg1P[k];
-    //      if (Character.isLowerCase(word.charAt(0)) && arg2.equals(word.trim())) break;
-    //      arg1R = arg1R + " " + word;
-    //      arg1RO = arg1RO + " " + arg1PO[k];
-    //    }
-    //    arg1Orginal = arg1RO.trim();
-
     String triple = arg1Orginal + SEP + arg2Orginal + SEP + arg3Original;
-    //System.out.println(triple);
-    //if (uniqueTriplesSet.contains(triple)) continue;
-    //if (FinalData.monthsLowerCase.contains(arg3) || FinalData.daysOfWeek.contains(arg3)) continue;
 
     HashSet<String> N1TypesNELL = nellTypes.get(arg1) == null ? new HashSet<String>() : nellTypes.get(arg1);
     HashSet<String> N2TypesNELL = nellTypes.get(arg3) == null ? new HashSet<String>() : nellTypes.get(arg3);
+
+    if (npCategoriesInContext.get(arg1) != null) N1TypesNELL.addAll(npCategoriesInContext.get(arg1));
+    if (npCategoriesInContext.get(arg2) != null) N2TypesNELL.addAll(npCategoriesInContext.get(arg2));
 
     HashSet<String> N1Types = new HashSet<String>();
     HashSet<String> N2Types = new HashSet<String>();
@@ -84,7 +90,6 @@ public class NominalsReader {
     }
 
     if (countryMap.get(arg1) != null) {
-      //arg1 = countryMap.get(arg1);
       N1Types.clear();
       N1Types.add("WKP_country");
       arg1 = countryMap.get(arg1);
@@ -138,40 +143,116 @@ public class NominalsReader {
           String a1 = idsToArgs.get(seq.pos1);
           String a2 = idsToArgs.get(seq.pos2);
           //relationstoInstances.get(relation).add(relation + "(" + a1 + "," + a2 + ")" + SEP + item + SEP + template);
-          relationstoInstances.get(relation).add(relation + SEP + a1 + SEP + a2 + SEP + triple);
+          relationstoInstances.get(relation).add(relation + SEP + a1 + SEP + a2);
+          result.add(new BinaryRelationInstance(relation, a1, a2));
+
         }
       }
     }
     uniqueTriplesSet.add(triple);
 
-    for (String relation : relationstoInstances.keySet()) {
 
-      //System.out.println(relationstoInstances.get(relation).size());
-      for (String instance : relationstoInstances.get(relation)) {
-        System.out.println(SEP + instance);
-      }
-    }
-
+    return result;
   }
 
-  public void extract(TriNominal nom) throws Exception {
+  public List<BinaryRelationInstance> extract(TriNominal nom, HashMap<String, HashSet<String>> npCategoriesInContext) throws Exception {
     if (basicextractor == null) {
       basicextractor = new CompoundNounBasicExtractor();
       countryMap = basicextractor.countryMap;
     }
     HashMap<String, HashMap<String, RelationSequence>> nominalsequences = basicextractor.nominalsequences;
     HashMap<String, HashSet<String>> nellTypes = basicextractor.nellTypes;
-    process(nom, nominalsequences, nellTypes);
+    List<BinaryRelationInstance> result = process(nom, nominalsequences, nellTypes, npCategoriesInContext);
 
-    //          // find properties in sentence
-    //          if (wordseq.size() > 300) continue;
-    //
-    //          List<TriNominal> nominalsList = cmp.extractNominals(wordseq);
-    //          for (TriNominal nom : nominalsList) {
-    //
-    //            
-    //          }
+    return result;
+  }
 
+  public String getName() {
+    return "cmunell_nom-0.0.1";
+  }
+
+  public boolean measuresConfidence() {
+    return false;
+  }
+
+  public AnnotationType<BinaryRelationInstance> produces() {
+    return NOMINALRELATIONS;
+  }
+
+  public AnnotationType<?>[] requires() {
+    return REQUIRED_ANNOTATIONS;
+  }
+
+  public List<Triple<TokenSpan, BinaryRelationInstance, Double>> annotate(DocumentNLP document) {
+    List<Triple<TokenSpan, BinaryRelationInstance, Double>> nominalsAnnotations = new ArrayList<Triple<TokenSpan, BinaryRelationInstance, Double>>();
+
+    // get all   noun phrase types found by the CAT annotator
+    HashMap<String, HashSet<String>> npCategoriesInContext = new HashMap<String, HashSet<String>>();
+    Collection<AnnotationTypeNLP<?>> col = new ArrayList<AnnotationTypeNLP<?>>();
+    col.add(AnnotationTypeNLPCat.NELL_CATEGORY);
+    List<Annotation> annotations = document.toMicroAnnotation(col).getAllAnnotations();
+    for (Annotation annotation : annotations) {
+      int startTokenIndex = -1;
+      int endTokenIndex = -1;
+      int sentenceIndex = -1;
+      int sentCount = document.getSentenceCount();
+      for (int j = 0; j < sentCount; j++) {
+        int tokenCount = document.getSentenceTokenCount(j);
+        for (int i = 0; i < tokenCount; i++) {
+          if (document.getToken(j, i).getCharSpanStart() == annotation.getSpanStart()) startTokenIndex = i;
+          if (document.getToken(j, i).getCharSpanEnd() == annotation.getSpanEnd()) {
+            endTokenIndex = i + 1;
+            sentenceIndex = j;
+            break;
+          }
+        }
+      }
+
+      if (startTokenIndex < 0 || endTokenIndex < 0) {
+      } else {
+        TokenSpan np = new TokenSpan(document, sentenceIndex, startTokenIndex, endTokenIndex);
+        String val = annotation.getStringValue();
+        if (npCategoriesInContext.get(np.toString().toLowerCase()) == null) {
+          npCategoriesInContext.put(np.toString().toLowerCase(), new HashSet<String>());
+        }
+        npCategoriesInContext.get(np.toString().toLowerCase()).add(val);
+
+      }
+    }
+
+    for (int sentenceIndex = 0; sentenceIndex < document.getSentenceCount(); sentenceIndex++) {
+      List<PoSTag> tags = document.getSentencePoSTags(sentenceIndex);
+      List<String> words = document.getSentenceTokenStrs(sentenceIndex);
+
+      WordSequence wordSequence = new WordSequence();
+      for (int j = 0; j < words.size(); j++) {
+        wordSequence.appendTag(tags.get(j).name());
+        wordSequence.appendWord(words.get(j));
+      }
+
+      if (basicextractor == null) {
+        basicextractor = new CompoundNounBasicExtractor();
+        countryMap = basicextractor.countryMap;
+      }
+      List<TriNominal> nominalsList = basicextractor.extractNominals(wordSequence);
+      for (TriNominal nom : nominalsList) {
+
+        try {
+          List<BinaryRelationInstance> result = extract(nom, npCategoriesInContext);
+          TokenSpan tokenspan = new TokenSpan(document, sentenceIndex, nom.spanStart, nom.spanEnd);
+          for (BinaryRelationInstance item : result) {
+            nominalsAnnotations.add(new Triple<TokenSpan, BinaryRelationInstance, Double>(tokenspan, item, 0.8));
+          }
+
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+
+      }
+
+    }
+
+    return nominalsAnnotations;
   }
 
 }
