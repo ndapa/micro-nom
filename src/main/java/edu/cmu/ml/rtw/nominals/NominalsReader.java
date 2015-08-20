@@ -15,6 +15,7 @@ import edu.cmu.ml.rtw.generic.data.annotation.nlp.TokenSpan;
 import edu.cmu.ml.rtw.generic.data.annotation.nlp.AnnotationTypeNLP.Target;
 import edu.cmu.ml.rtw.generic.data.annotation.nlp.micro.Annotation;
 import edu.cmu.ml.rtw.generic.model.annotator.nlp.AnnotatorTokenSpan;
+import edu.cmu.ml.rtw.generic.util.Pair;
 import edu.cmu.ml.rtw.generic.util.Triple;
 import edu.cmu.ml.rtw.micro.cat.data.annotation.nlp.AnnotationTypeNLPCat;
 import edu.cmu.ml.rtw.nominals.util.RelationSequence;
@@ -73,8 +74,16 @@ public class NominalsReader implements AnnotatorTokenSpan<BinaryRelationInstance
     HashSet<String> N1TypesNELL = nellTypes.get(arg1) == null ? new HashSet<String>() : nellTypes.get(arg1);
     HashSet<String> N2TypesNELL = nellTypes.get(arg3) == null ? new HashSet<String>() : nellTypes.get(arg3);
 
-    if (npCategoriesInContext.get(arg1) != null) N1TypesNELL.addAll(npCategoriesInContext.get(arg1));
-    if (npCategoriesInContext.get(arg2) != null) N2TypesNELL.addAll(npCategoriesInContext.get(arg2));
+    if (npCategoriesInContext.get(arg1) != null) {
+      N1TypesNELL.addAll(npCategoriesInContext.get(arg1));
+      //      for (String found : npCategoriesInContext.get(arg1)) {
+      //      }
+    }
+    if (npCategoriesInContext.get(arg3) != null) {
+      N2TypesNELL.addAll(npCategoriesInContext.get(arg3));
+      //      for (String found : npCategoriesInContext.get(arg3)) {
+      //      }
+    }
 
     HashSet<String> N1Types = new HashSet<String>();
     HashSet<String> N2Types = new HashSet<String>();
@@ -150,7 +159,6 @@ public class NominalsReader implements AnnotatorTokenSpan<BinaryRelationInstance
       }
     }
     uniqueTriplesSet.add(triple);
-
 
     return result;
   }
@@ -235,8 +243,27 @@ public class NominalsReader implements AnnotatorTokenSpan<BinaryRelationInstance
         countryMap = basicextractor.countryMap;
       }
       List<TriNominal> nominalsList = basicextractor.extractNominals(wordSequence);
-      for (TriNominal nom : nominalsList) {
 
+      if (nominalsList.size() > 0) {
+        List<Pair<TokenSpan, String>> NER = document.getNer();
+        for (Pair<TokenSpan, String> span : NER) {
+          if (span.getSecond().toString().equals("O")) continue;
+
+          String entity = span.getFirst().toString();
+          if (npCategoriesInContext.get(entity) == null) {
+            npCategoriesInContext.put(entity, new HashSet<String>());
+          }
+          npCategoriesInContext.get(entity).add(span.getSecond().toString().toLowerCase());
+
+          entity = span.getFirst().toString().toLowerCase();
+          if (npCategoriesInContext.get(entity) == null) {
+            npCategoriesInContext.put(entity, new HashSet<String>());
+          }
+          npCategoriesInContext.get(entity).add(span.getSecond().toString().toLowerCase());
+
+        }
+      }
+      for (TriNominal nom : nominalsList) {
         try {
           List<BinaryRelationInstance> result = extract(nom, npCategoriesInContext);
           TokenSpan tokenspan = new TokenSpan(document, sentenceIndex, nom.spanStart, nom.spanEnd);
@@ -254,5 +281,4 @@ public class NominalsReader implements AnnotatorTokenSpan<BinaryRelationInstance
 
     return nominalsAnnotations;
   }
-
 }
