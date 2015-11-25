@@ -152,16 +152,16 @@ public class CompoundNounBasicExtractor {
 
         if (relationsOfInterest.contains(relation)) {
           relation = relation.trim();
-          //          if (relation.equals("[CitizenOfCountry]")) {
-          //            String relation2 = "per:country_of_birth";
-          //            if (relationsToSequenceMap.get(relation2) == null) {
-          //              relationsToSequenceMap.put(relation2, new HashMap<String, RelationSequence>());
-          //            }
-          //            // relationsToSequenceMap.get(relation.trim()).put(args.trim(), new RelationSequence(items[0], items[1], items[2], pos1, pos2, freq));
-          //            relationsToSequenceMap.get(relation2.trim()).put(args.trim(), new RelationSequence(items[0], items[1], items[2], pos1, pos2, freq));
-          //            relation = "per:countries_of_residence";
-          //
-          //          }
+          if (relation.equals("[CitizenOfCountry]")) {
+            // String relation2 = "per:country_of_birth";
+            //            if (relationsToSequenceMap.get(relation2) == null) {
+            //              relationsToSequenceMap.put(relation2, new HashMap<String, RelationSequence>());
+            //            }
+            // relationsToSequenceMap.get(relation.trim()).put(args.trim(), new RelationSequence(items[0], items[1], items[2], pos1, pos2, freq));
+            // relationsToSequenceMap.get(relation2.trim()).put(args.trim(), new RelationSequence(items[0], items[1], items[2], pos1, pos2, freq));
+            relation = "per:countries_of_residence";
+
+          }
           //
           //          if (relation.equals("concept:personhasjobposition")) {
           //            String relation2 = "per:title";
