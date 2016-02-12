@@ -17,6 +17,7 @@ import edu.cmu.ml.rtw.generic.data.annotation.nlp.micro.Annotation;
 import edu.cmu.ml.rtw.generic.model.annotator.nlp.AnnotatorTokenSpan;
 import edu.cmu.ml.rtw.generic.util.Pair;
 import edu.cmu.ml.rtw.generic.util.Triple;
+import edu.cmu.ml.rtw.micro.cat.data.CatDataTools;
 import edu.cmu.ml.rtw.micro.cat.data.annotation.nlp.AnnotationTypeNLPCat;
 import edu.cmu.ml.rtw.nominals.util.RelationSequence;
 import edu.cmu.ml.rtw.nominals.util.WordSequence;
@@ -196,36 +197,14 @@ public class NominalsReader implements AnnotatorTokenSpan<BinaryRelationInstance
 
     // get all   noun phrase types found by the CAT annotator
     HashMap<String, HashSet<String>> npCategoriesInContext = new HashMap<String, HashSet<String>>();
-    Collection<AnnotationTypeNLP<?>> col = new ArrayList<AnnotationTypeNLP<?>>();
-    col.add(AnnotationTypeNLPCat.NELL_CATEGORY);
-    List<Annotation> annotations = document.toMicroAnnotation(col).getAllAnnotations();
-    for (Annotation annotation : annotations) {
-      int startTokenIndex = -1;
-      int endTokenIndex = -1;
-      int sentenceIndex = -1;
-      int sentCount = document.getSentenceCount();
-      for (int j = 0; j < sentCount; j++) {
-        int tokenCount = document.getSentenceTokenCount(j);
-        for (int i = 0; i < tokenCount; i++) {
-          if (document.getToken(j, i).getCharSpanStart() == annotation.getSpanStart()) startTokenIndex = i;
-          if (document.getToken(j, i).getCharSpanEnd() == annotation.getSpanEnd()) {
-            endTokenIndex = i + 1;
-            sentenceIndex = j;
-            break;
-          }
-        }
+    for (Pair<TokenSpan, String> pair : document.getTokenSpanAnnotations(AnnotationTypeNLPCat.NELL_CATEGORY)) {
+      TokenSpan first = pair.getFirst();
+      TokenSpan np = new TokenSpan(document, first.getSentenceIndex(), first.getStartTokenIndex(), first.getEndTokenIndex());
+      String val = pair.getSecond();
+      if (npCategoriesInContext.get(np.toString().toLowerCase()) == null) {
+        npCategoriesInContext.put(np.toString().toLowerCase(), new HashSet<String>());
       }
-
-      if (startTokenIndex < 0 || endTokenIndex < 0) {
-      } else {
-        TokenSpan np = new TokenSpan(document, sentenceIndex, startTokenIndex, endTokenIndex);
-        String val = annotation.getStringValue();
-        if (npCategoriesInContext.get(np.toString().toLowerCase()) == null) {
-          npCategoriesInContext.put(np.toString().toLowerCase(), new HashSet<String>());
-        }
-        npCategoriesInContext.get(np.toString().toLowerCase()).add(val);
-
-      }
+      npCategoriesInContext.get(np.toString().toLowerCase()).add(val);
     }
 
     for (int sentenceIndex = 0; sentenceIndex < document.getSentenceCount(); sentenceIndex++) {
