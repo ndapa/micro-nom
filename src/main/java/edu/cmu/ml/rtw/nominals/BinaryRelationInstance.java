@@ -16,11 +16,11 @@ public class BinaryRelationInstance implements StringSerializable {
 
   public String toString() {
 
-    return relation + "\t" + arg1 + "\t" + arg2;
+    return relation + "|" + arg1 + "|" + arg2;
   }
 
   public boolean fromString(String arg0) {
-    String[] parts = arg0.toLowerCase().split("\t");
+    String[] parts = arg0.toLowerCase().split("|");
 
     try {
       new BinaryRelationInstance(parts[0], parts[1], parts[2]);
