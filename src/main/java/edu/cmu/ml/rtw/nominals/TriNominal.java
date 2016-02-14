@@ -37,7 +37,7 @@ public class TriNominal {
   }
 
   public String toString() {
-    String SEP = "\t";
+    String SEP = "|";
     return arg1 + SEP + arg2 + SEP + arg3;
   }
 
