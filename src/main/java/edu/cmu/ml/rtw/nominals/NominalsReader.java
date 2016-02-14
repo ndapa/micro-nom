@@ -245,7 +245,7 @@ public class NominalsReader implements AnnotatorTokenSpan<BinaryRelationInstance
       for (TriNominal nom : nominalsList) {
         try {
           List<BinaryRelationInstance> result = extract(nom, npCategoriesInContext);
-          TokenSpan tokenspan = new TokenSpan(document, sentenceIndex, nom.spanStart, nom.spanEnd);
+          TokenSpan tokenspan = new TokenSpan(document, sentenceIndex, nom.spanStart, nom.spanEnd+1);
           for (BinaryRelationInstance item : result) {
             nominalsAnnotations.add(new Triple<TokenSpan, BinaryRelationInstance, Double>(tokenspan, item, 0.8));
           }
